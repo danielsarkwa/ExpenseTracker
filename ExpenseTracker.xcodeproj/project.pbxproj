@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		006E2A0C2A144A6C00DCDEFD /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006E2A0B2A144A6C00DCDEFD /* TransactionListViewModel.swift */; };
 		007A1C412A0FD9AD009E5298 /* ExpenseTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A1C402A0FD9AD009E5298 /* ExpenseTrackerApp.swift */; };
 		007A1C432A0FD9AD009E5298 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A1C422A0FD9AD009E5298 /* ContentView.swift */; };
 		007A1C452A0FD9AD009E5298 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 007A1C442A0FD9AD009E5298 /* Assets.xcassets */; };
 		007A1C482A0FD9AD009E5298 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 007A1C472A0FD9AD009E5298 /* Preview Assets.xcassets */; };
+		00C3D1922A155E1F00B80A3B /* RecentTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C3D1912A155E1F00B80A3B /* RecentTransactionView.swift */; };
 		00F5800E2A127AFB00FE1D9F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F5800D2A127AFB00FE1D9F /* Extensions.swift */; };
 		00F580102A127EE100FE1D9F /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F5800F2A127EE100FE1D9F /* TransactionModel.swift */; };
 		00F580122A127F9200FE1D9F /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F580112A127F9200FE1D9F /* PreviewData.swift */; };
@@ -19,11 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		006E2A0B2A144A6C00DCDEFD /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
 		007A1C3D2A0FD9AD009E5298 /* ExpenseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		007A1C402A0FD9AD009E5298 /* ExpenseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTrackerApp.swift; sourceTree = "<group>"; };
 		007A1C422A0FD9AD009E5298 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		007A1C442A0FD9AD009E5298 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		007A1C472A0FD9AD009E5298 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		00C3D1912A155E1F00B80A3B /* RecentTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTransactionView.swift; sourceTree = "<group>"; };
 		00F5800D2A127AFB00FE1D9F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		00F5800F2A127EE100FE1D9F /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		00F580112A127F9200FE1D9F /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
@@ -63,7 +67,9 @@
 			children = (
 				007A1C402A0FD9AD009E5298 /* ExpenseTrackerApp.swift */,
 				007A1C422A0FD9AD009E5298 /* ContentView.swift */,
+				00C3D1912A155E1F00B80A3B /* RecentTransactionView.swift */,
 				00F580132A127FEE00FE1D9F /* TransactionRow.swift */,
+				006E2A0B2A144A6C00DCDEFD /* TransactionListViewModel.swift */,
 				00F5800F2A127EE100FE1D9F /* TransactionModel.swift */,
 				00F5800D2A127AFB00FE1D9F /* Extensions.swift */,
 				007A1C442A0FD9AD009E5298 /* Assets.xcassets */,
@@ -157,11 +163,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00C3D1922A155E1F00B80A3B /* RecentTransactionView.swift in Sources */,
 				00F580122A127F9200FE1D9F /* PreviewData.swift in Sources */,
 				00F580102A127EE100FE1D9F /* TransactionModel.swift in Sources */,
 				007A1C432A0FD9AD009E5298 /* ContentView.swift in Sources */,
 				00F580142A127FEE00FE1D9F /* TransactionRow.swift in Sources */,
 				00F5800E2A127AFB00FE1D9F /* Extensions.swift in Sources */,
+				006E2A0C2A144A6C00DCDEFD /* TransactionListViewModel.swift in Sources */,
 				007A1C412A0FD9AD009E5298 /* ExpenseTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
