@@ -54,6 +54,10 @@ struct Category {
     let name: String
     let icon: FontAwesomeCode
     var mainCategoryId: Int?
+    
+    var subcategories: [Category]? {
+        Category.subCategories.filter { $0.mainCategoryId == id }
+    }
 }
 
 extension Category {
@@ -82,7 +86,7 @@ extension Category {
     static let creditCardPayment = Category(id: 901, name: "Credit Card Payment", icon: .exchange_alt, mainCategoryId: 9)
 }
 
-extension Category {
+extension Category: Identifiable {
     static let categories: [Category] = [
         .autoAndTransport,
         .billsAndUtilities,

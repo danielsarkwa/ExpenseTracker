@@ -16,7 +16,19 @@ struct TransactionList: View {
                 ForEach(Array(transactionListVM.groupTransactionByMonth()), id: \.key) { month, transaction in
                     Section {
                         ForEach(transaction) { data in
-                            TransactionRow(transaction: data)
+                            NavigationLink {
+                                TransactionView(transaction: data)
+                            } label: {
+                                TransactionRow(transaction: data)
+                            }
+                            
+//                            TransactionRow(transaction: transaction)
+//                                .overlay(
+//                                    NavigationLink("", destination: {
+//                                        TransactionView(transaction: transaction)
+//                                    })
+//                                    .opacity(0)
+//                                )
                         }
                     } header: {
                         Text(month)

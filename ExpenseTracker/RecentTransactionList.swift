@@ -31,7 +31,11 @@ struct RecentTransactionList: View {
             .padding(.top)
             
             ForEach(Array(transactionListVM.transactions.prefix(5).enumerated()), id: \.element) { index, data in
-                TransactionRow(transaction: data)
+                NavigationLink {
+                    TransactionView(transaction: data)
+                } label: {
+                    TransactionRow(transaction: data)
+                }
                 
                 Divider()
                     .opacity(index == 4 ? 0 : 1)
