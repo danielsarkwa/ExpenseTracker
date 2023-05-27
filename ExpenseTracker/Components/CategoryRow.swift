@@ -36,13 +36,15 @@ struct CategoryRow: View {
                     .font(.subheadline)
             }
             
+            Spacer()
+            
             if isSelected {
-                Spacer()
                 Image(systemName: "checkmark.circle.fill")
                     .font(.system(size: 16))
                     .foregroundColor(Color.icon)
             }
         }
+        .contentShape(Rectangle())
     }
 }
 

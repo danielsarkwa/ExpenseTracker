@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CategoriesView: View {
     var transaction: Transaction
+    @EnvironmentObject var transactionListVM: TransactionListViewModel
+    @Environment(\.dismiss) var dismiss // used to remove a child view from the navigation tree
     
     var body: some View {
         List {
@@ -18,11 +20,19 @@ struct CategoriesView: View {
                         let isSelected = transaction.categoryId == subcategory.id
                         
                         CategoryRow(category: subcategory, isSelected: isSelected)
+                            .onTapGesture {
+                                transactionListVM.updateCategory(transaction: transaction, category: subcategory)
+                                dismiss()
+                            }
                     }
                 } header: {
                     let isSelected = transaction.categoryId == category.id
 
                     CategoryRow(category: category, isSelected: isSelected)
+                        .onTapGesture {
+                            transactionListVM.updateCategory(transaction: transaction, category: category)
+                            dismiss()
+                        }
                 }
             }
         }
@@ -39,5 +49,6 @@ struct CategoriesView_Previews: PreviewProvider {
             CategoriesView(transaction: transactionPreviewData)
                 .preferredColorScheme(.dark)
         }
+        .environmentObject(TransactionListViewModel())
     }
 }

@@ -80,17 +80,11 @@
 			isa = PBXGroup;
 			children = (
 				007A1C402A0FD9AD009E5298 /* ExpenseTrackerApp.swift */,
-				007A1C422A0FD9AD009E5298 /* ContentView.swift */,
-				002B6D5B2A1FCE3C0023183C /* TransactionDetailRow.swift */,
-				002B6D5D2A1FCF4A0023183C /* TransactionView.swift */,
-				002B6D5F2A1FD3190023183C /* CategoryRow.swift */,
-				002B6D612A1FD50E0023183C /* CategoriesView.swift */,
-				00C3D1912A155E1F00B80A3B /* RecentTransactionList.swift */,
-				00F580132A127FEE00FE1D9F /* TransactionRow.swift */,
-				006E2A0B2A144A6C00DCDEFD /* TransactionListViewModel.swift */,
-				00F34F422A1E7BC100F7E480 /* TransactionList.swift */,
-				00F5800F2A127EE100FE1D9F /* TransactionModel.swift */,
-				00F5800D2A127AFB00FE1D9F /* Extensions.swift */,
+				0091D0502A2221DB006C2628 /* Views */,
+				0091D0512A222204006C2628 /* Components */,
+				0091D0522A222293006C2628 /* ViewModel */,
+				0091D0532A2222C1006C2628 /* Models */,
+				0091D0542A2222CA006C2628 /* Utils */,
 				007A1C442A0FD9AD009E5298 /* Assets.xcassets */,
 				007A1C462A0FD9AD009E5298 /* Preview Content */,
 			);
@@ -104,6 +98,52 @@
 				00F580112A127F9200FE1D9F /* PreviewData.swift */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0091D0502A2221DB006C2628 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				007A1C422A0FD9AD009E5298 /* ContentView.swift */,
+				00F34F422A1E7BC100F7E480 /* TransactionList.swift */,
+				002B6D5D2A1FCF4A0023183C /* TransactionView.swift */,
+				002B6D612A1FD50E0023183C /* CategoriesView.swift */,
+				00C3D1912A155E1F00B80A3B /* RecentTransactionList.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0091D0512A222204006C2628 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				002B6D5B2A1FCE3C0023183C /* TransactionDetailRow.swift */,
+				002B6D5F2A1FD3190023183C /* CategoryRow.swift */,
+				00F580132A127FEE00FE1D9F /* TransactionRow.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0091D0522A222293006C2628 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				006E2A0B2A144A6C00DCDEFD /* TransactionListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0091D0532A2222C1006C2628 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				00F5800F2A127EE100FE1D9F /* TransactionModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0091D0542A2222CA006C2628 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				00F5800D2A127AFB00FE1D9F /* Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

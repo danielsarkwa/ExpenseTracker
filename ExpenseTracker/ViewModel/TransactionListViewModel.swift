@@ -83,4 +83,16 @@ final class TransactionListViewModel: ObservableObject {
         
         return cumulativeSum
     }
+    
+    func updateCategory(transaction: Transaction, category: Category) {
+        guard transaction.categoryId != category.id else { return }
+        
+        // get the transaction to be updated from the transaction array
+        if let index = transactions.firstIndex(where: { $0.id == transaction.id }) {
+            var updatedTransaction = transactions[index]
+            updatedTransaction.categoryId = category.id // update transaction category with the new transaction category
+            updatedTransaction.isEdited = true
+            transactions[index] = updatedTransaction // update the transactions list with the new transaction
+        }
+    }
 }

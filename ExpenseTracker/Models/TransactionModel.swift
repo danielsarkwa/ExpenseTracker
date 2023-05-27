@@ -17,7 +17,7 @@ struct Transaction: Identifiable, Decodable, Hashable {
     let amount: Double
     let type: TransactionType.RawValue // THE STRING VERSION
     var categoryId: Int
-    var category: String
+    var category: String // category name
     let isPending: Bool
     var isTransfer: Bool
     var isExpense: Bool
@@ -41,6 +41,14 @@ struct Transaction: Identifiable, Decodable, Hashable {
     
     var month: String {
         dateParsed.formatted(.dateTime.year().month(.wide))
+    }
+    
+    var categoryItem: Category { // represents the category object
+        if let category = Category.all.first(where: { $0.id == categoryId }) { // returns a complete object for the transaction to use, so if the name category id changes, the name changes in the component changes
+            return category
+        }
+        
+        return .shopping
     }
 }
 
